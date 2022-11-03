@@ -9,6 +9,10 @@
     --primary:rgba(254, 44, 85, 1);
     --default-layout-height : 60px;
     --default-layout-width:1150px;
+
+    --text-color:#ccc;
+    --black:#000;
+    --white:#fff;
 }
 
 * {
@@ -26,4 +30,14 @@ body {
     font-size: 1.6rem;
     line-height: 1.5rem;
     text-rendering: optimizeSpeed;
+    color:var(--text-color);
+}
+
+input , button , [tabIndex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
 }
