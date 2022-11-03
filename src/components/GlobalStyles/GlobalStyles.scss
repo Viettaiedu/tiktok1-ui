@@ -7,10 +7,13 @@
 
 :root {
     --primary:rgba(254, 44, 85, 1);
+    --default-layout-height : 60px;
+    --default-layout-width:1150px;
 }
 
 * {
-
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 

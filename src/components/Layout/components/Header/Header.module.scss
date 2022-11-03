@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    height: var(--default-layout-height);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    width: 100%;
+}
+
+.inner {
+    width:var(--default-layout-width);
+    height: 100%;
+}
