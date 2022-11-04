@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+    }
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    span {
+        color: var(--black);
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+
+    svg {
+        color: rgb(32, 213, 236);
+        font-size: 1.4rem;
+        position: relative;
+        top: -4px;
+    }
+}
+.username {
+    font-size: 1.4rem;
+
+}
