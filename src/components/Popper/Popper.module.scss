@@ -2,8 +2,8 @@
     width: 100%;
     background: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+    max-height: 200px;
     max-height: min((100vh - 96px) - 60px, 734px);
-    min-height: 200px;
     padding: 12px 0px;
 }
 

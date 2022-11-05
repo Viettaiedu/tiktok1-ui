@@ -1,0 +1,26 @@
+.menu-list {
+    width: 224px;
+    min-height: 100px;
+    .menu-item {
+        display: block;
+        padding: 12px 16px;
+        background-color: transparent;
+        font-size: 1.6rem;
+        color: black;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        svg {
+            padding-right: 10px;
+            width: 20px;
+        }
+        &:hover {
+            background: rgba(22, 24, 35, 0.03);
+        }
+    }
+
+    
+}
+.menu-list[data-animation='rotate'][data-state='hidden'] {
+    transform: rotate(90deg);
+  }
