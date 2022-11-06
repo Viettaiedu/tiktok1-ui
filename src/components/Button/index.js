@@ -16,10 +16,11 @@ function Button({
     upload,
     small,
     large,
-    to,
-    href,
     RightIcon,
     leftIcon,
+    // prop
+    to,
+    href,
     onClick,
     
     ...args
@@ -27,6 +28,7 @@ function Button({
     let Comp = 'button';
 
     let props = {
+        onClick,
         ...args,
     };
     if (disable) {
