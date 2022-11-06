@@ -18,6 +18,7 @@ function Button({
     large,
     RightIcon,
     leftIcon,
+  
     // prop
     to,
     href,
@@ -48,6 +49,7 @@ function Button({
         upload,
         small,
         large,
+       
     });
     return (
         <Comp className={classes} {...props}>

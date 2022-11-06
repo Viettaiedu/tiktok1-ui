@@ -42,3 +42,16 @@ a {
     color:var(--text-color);
     text-decoration: none;
 }
+
+// Css tippy to tooltp
+body {
+    &.tippy-box {
+        background-color: #333333ad;
+    }
+    &.tippy-arrow {
+        color: #333333ad;
+    }
+    &.tippy-box::before {
+        border-bottom-color: initial;
+    }
+}

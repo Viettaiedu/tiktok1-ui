@@ -17,7 +17,13 @@
         &:hover {
             background: rgba(22, 24, 35, 0.03);
         }
+        &.separate {
+            border-top: 1px solid #ccc;
+        }  
+        
     }
+
+   
 }
 // Menu items
 .content {
@@ -51,3 +57,12 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+// separate menu last
+.light {
+    float:right;
+    padding: 0px 8px;
+  }
+
+
+
