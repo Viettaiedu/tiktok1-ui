@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCableCar } from '@fortawesome/free-solid-svg-icons';
 import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
-
+import PropTypes from 'prop-types';
 const cx = classNames.bind(styles);
 
 function Button({
@@ -60,5 +60,7 @@ function Button({
         </Comp>
     );
 }
-
+Button.propTypes = {
+    children : PropTypes.node.isRequired,
+}
 export default Button;

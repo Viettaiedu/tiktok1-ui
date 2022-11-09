@@ -49,136 +49,6 @@ const MENU_ITEMS = [
                     code: 'vi',
                     title: 'Vietnamese',
                 },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
-                {
-                    type: 'Language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'Language',
-                    code: 'vi',
-                    title: 'Vietnamese',
-                },
             ],
         },
     },
@@ -238,10 +108,8 @@ function Header() {
             <div className={cx('inner')}>
                 {/* left */}
                 <Link to={routesConfig.home}>
-                   
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
-
                 {/* between */}
 
                 <Search />
@@ -281,14 +149,13 @@ function Header() {
                     )}
                     <Menu items={userCurrent ? userItems : MENU_ITEMS} onChange={onChange}>
                         {userCurrent ? (
-                            <Image 
-                              
+                            <Image
                                 className={cx('action-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/39911deb09b62b80810dec42c0722bbd~c5_100x100.jpeg?x-expires=1667880000&x-signature=FmH6MGDxXLEMzJ%2BoNkSa7Ug%2BLH4%3D"
                                 alt="Nguyenvana"
                             />
                         ) : (
-                            <button className={cx('more-btn')} >
+                            <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
                             </button>
                         )}
