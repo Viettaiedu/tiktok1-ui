@@ -19,15 +19,17 @@
         }
         &.separate {
             border-top: 1px solid #ccc;
-        }  
-        
+        }
     }
-
-   
 }
 // Menu items
 .content {
     border-radius: 5px;
+}
+
+.menu-scroll {
+    overflow-y: auto;
+    max-height: 590px;
 }
 
 // Header menu
@@ -53,16 +55,13 @@
 
 .header-title {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 // separate menu last
 .light {
-    float:right;
+    float: right;
     padding: 0px 8px;
-  }
-
-
-
+}

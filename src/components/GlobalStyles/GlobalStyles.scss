@@ -1,20 +1,15 @@
 @import 'normalize.css';
 
-
-
-
-
 :root {
-    --primary:rgba(254, 44, 85, 1);
-    --default-layout-height : 60px;
-    --default-layout-width:1150px;
-    --default-padding-spacing-right-and-left:24px;
-    --text-color:#ccc;
-    --black:#000;
-    --white:#fff;
+    --primary: rgba(254, 44, 85, 1);
+    --default-layout-height: 60px;
+    --default-layout-width: 1150px;
+    --default-padding-spacing-right-and-left: 24px;
+    --text-color: #ccc;
+    --black: #000;
+    --white: #fff;
 
-
-    --font-family :"Proxima-Nova-Regular";
+    --font-family: 'Proxima-Nova-Regular';
 }
 
 * {
@@ -32,27 +27,49 @@ body {
     font-size: 1.6rem;
     line-height: 1.5rem;
     text-rendering: optimizeSpeed;
-    color:var(--text-color);
+    color: var(--text-color);
+    overflow-y: overlay;
 }
 
-input , button , [tabIndex] {
+// scroll bar
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+input,
+button,
+[tabIndex] {
     outline: none;
     border: none;
 }
 
 a {
-    color:var(--text-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 
 //fonts
 @font-face {
-    font-family:"Proxima-Nova-Regular" ;
+    font-family: 'Proxima-Nova-Regular';
     src: url(/assets/fonts/Proxima-Nova-Regular.woff2);
     font-weight: 400;
 }
-
-
 
 // Css tippy to tooltp
 body {
