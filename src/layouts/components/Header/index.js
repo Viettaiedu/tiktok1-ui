@@ -26,6 +26,7 @@ import images from '~/assets/images';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons';
+// --
 import { UploadIcon, MailIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';

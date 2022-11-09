@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Main.module.scss';
-
+import propTypes from 'prop-types';
+//
 import Header from '~/layouts/components/Header';
 import Sidebar from './Sidebar';
 
@@ -16,5 +17,7 @@ function Main({ children }) {
         </div>
     );
 }
-
+Main.propTypes = {
+    children : propTypes.node.isRequired,
+}
 export default Main;

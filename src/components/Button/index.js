@@ -9,14 +9,14 @@ const cx = classNames.bind(styles);
 
 function Button({
     children,
-    primary,
     outline,
     disable,
+    primary,
     follow,
     upload,
     small,
     large,
-    RightIcon,
+    rightIcon,
     leftIcon,
   
     // prop
@@ -56,11 +56,26 @@ function Button({
             {leftIcon || (leftIcon && <FontAwesomeIcon className={cx('icon-left')} icon={faCableCar} />)}
             {upload && <FontAwesomeIcon className={cx('icon-plus')} icon={faPlusSquare} />}
             <span>{children}</span>
-            {RightIcon || (RightIcon && <FontAwesomeIcon className={cx('icon-right')} icon={faCableCar} />)}
+            {rightIcon || (rightIcon && <FontAwesomeIcon className={cx('icon-right')} icon={faCableCar} />)}
         </Comp>
     );
 }
 Button.propTypes = {
     children : PropTypes.node.isRequired,
+    outline : PropTypes.bool,
+    disable : PropTypes.bool,
+    primary : PropTypes.bool,
+    follow : PropTypes.bool,
+    upload : PropTypes.bool,
+    small : PropTypes.bool,
+    large : PropTypes.bool,
+
+    rightIcon : PropTypes.node,
+    leftIcon : PropTypes.node,
+
+    to : PropTypes.string,
+    href : PropTypes.string,
+
+    onClick : PropTypes.func,
 }
 export default Button;
