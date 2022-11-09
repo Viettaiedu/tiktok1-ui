@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/';
 import 'tippy.js/dist/tippy.css';
-
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -20,6 +20,7 @@ import {
 // End framework
 
 // logo tiktok
+import routesConfig from '~/config/routes';
 import images from '~/assets/images';
 
 import Button from '~/components/Button';
@@ -100,17 +101,18 @@ const userItems = [
     },
 ];
 function Header() {
-   
-    
     let userCurrent = true;
 
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 {/* left */}
-                <img src={images.logo} alt="Tiktok" />
-                {/* between */}
+                <Link to={routesConfig.home}>
+                   
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
+                {/* between */}
 
                 <Search />
                 {/* right */}
@@ -149,13 +151,14 @@ function Header() {
                     )}
                     <Menu items={userCurrent ? userItems : MENU_ITEMS} onChange={onChange}>
                         {userCurrent ? (
-                            <Image
+                            <Image 
+                              
                                 className={cx('action-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/39911deb09b62b80810dec42c0722bbd~c5_100x100.jpeg?x-expires=1667880000&x-signature=FmH6MGDxXLEMzJ%2BoNkSa7Ug%2BLH4%3D"
                                 alt="Nguyenvana"
                             />
                         ) : (
-                            <button className={cx('more-btn')}>
+                            <button className={cx('more-btn')} >
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
                             </button>
                         )}

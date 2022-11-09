@@ -28,7 +28,7 @@ function Search() {
         }
         const fetchApi = async () => {
             setShowSpiner(true);
-            const res = await searchServices.handle(debounce ,  "less");
+            const res = await searchServices.handle(debounce, 'less');
             setSearchResult(res.data);
             setShowSpiner(false);
         };
@@ -39,8 +39,10 @@ function Search() {
         setShowResult(false);
     };
 
-    const handleValue = (value) => {
-        setSearchValue(value);
+    const handleValue = (e) => {
+        if (!e.target.value.startsWith(' ')) {
+            setSearchValue(e.target.value);
+        }
     };
 
     return (
@@ -64,7 +66,7 @@ function Search() {
                     ref={inputRef}
                     value={searchValue}
                     placeholder="Tìm kiếm tài khoản và video"
-                    onChange={(e) => handleValue(e.target.value)}
+                    onChange={handleValue}
                     onFocus={() => {
                         if (!!searchValue) {
                             setShowResult(true);
@@ -83,7 +85,7 @@ function Search() {
                     </button>
                 )}
                 {showSpiner && <FontAwesomeIcon icon={faSpinner} className={cx('loading')} />}
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                     <SearchIcon />
                 </button>
             </div>
