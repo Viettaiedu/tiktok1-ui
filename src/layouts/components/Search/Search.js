@@ -21,19 +21,19 @@ function Search() {
     const inputRef = useRef();
     // debounce => giúp để tránh những re-render không cần thiết , giúp chúng
     // ta tối ưu hóa tính năng ..
-    let debounce = useDebounce(searchValue, 500);
+    let debounceValue = useDebounce(searchValue, 500);
     useEffect(() => {
-        if (!debounce.trim()) {
+        if (!debounceValue.trim()) {
             return;
         }
         const fetchApi = async () => {
             setShowSpiner(true);
-            const res = await searchServices.handle(debounce, 'less');
+            const res = await searchServices.handle(debounceValue, 'less');
             setSearchResult(res.data);
             setShowSpiner(false);
         };
         fetchApi();
-    }, [debounce]);
+    }, [debounceValue]);
 
     const handleHideResult = () => {
         setShowResult(false);
